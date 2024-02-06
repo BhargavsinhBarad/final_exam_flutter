@@ -1,10 +1,8 @@
-import 'package:final_exam_flutter/modules/views/login/model/helper/api_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../utils/global/global.dart';
-import '../model/api_model.dart';
 
 class login extends StatelessWidget {
   const login({super.key});
@@ -34,7 +32,10 @@ class login extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
                   "Welcome to Tamang\nFood Services",
-                  style: TextStyle(fontSize: 32),
+                  style: GoogleFonts.abel(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 32,
+                  ),
                 ),
               ),
               SizedBox(
@@ -92,26 +93,14 @@ class login extends StatelessWidget {
                 height: Get.height * 0.03,
               ),
               GestureDetector(
-                onTap: () {
-                  FutureBuilder(
-                    future: apihelper.api.getdata(),
-                    builder: (context, snapshot) {
-                      if (snapshot.hasError) {
-                        return Text("");
-                      } else if (snapshot.hasData) {
-                        List<api_model>? data = snapshot.data;
-                      }
-                      return Container();
-                    },
-                  );
-                },
+                onTap: () {},
                 child: Container(
                   height: Get.height * 0.06,
                   width: Get.width,
                   margin:
                       const EdgeInsets.only(left: 20, right: 20, bottom: 40),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(8),
                       color: Color(0xFFEEA734)),
                   child: const Center(
                     child: Text(
@@ -179,7 +168,7 @@ class login extends StatelessWidget {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(8),
                     color: Color(0xFF395998)),
               ),
               Container(
@@ -199,7 +188,7 @@ class login extends StatelessWidget {
                           ),
                           decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(2)),
+                              borderRadius: BorderRadius.circular(8)),
                         ),
                       ),
                       Spacer(),
@@ -217,7 +206,7 @@ class login extends StatelessWidget {
                   ),
                 ),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(8),
                     color: Color(0xFF4285F4)),
               ),
             ],

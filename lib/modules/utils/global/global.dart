@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class Global {
@@ -18,7 +17,7 @@ class Global {
           color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
     )),
     decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(2), color: Color(0xFFEEA734)),
+        borderRadius: BorderRadius.circular(20), color: Color(0xFFEEA734)),
   );
 
   static int? num;
